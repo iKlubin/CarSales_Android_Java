@@ -75,7 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
                 for (Car item : dataFull) {
-                    if (item.getModel().toLowerCase().contains(filterPattern)) {
+                    if ((item.getModel() + " " + item.getBrand() + " " + item.getCost()).toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }
                 }
